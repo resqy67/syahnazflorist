@@ -14,7 +14,7 @@
                     </div>
                 </diV>
                 <p class="text-slate-600 mb-4">
-                    Syanaz Florist adalah toko bunga yang berlokasi di Balikpapan, Kalimantan Timur. Kami menyediakan berbagai macam karangan bunga untuk berbagai keperluan.
+                    Syahnaz Florist adalah toko bunga yang berlokasi di Balikpapan, Kalimantan Timur. Kami menyediakan berbagai macam karangan bunga untuk berbagai keperluan.
                 </p>
             </div>
                     {{-- <img src="{{ asset('logo.png') }}" alt="Syanaz Florist Logo" class="h-32 w-full"> --}}
@@ -96,7 +96,7 @@
             class="flex flex-col items-center justify-center w-full py-4 mt-12 border-t border-slate-200 md:flex-row md:justify-between">
             <p class="block mb-4 text-sm text-center text-slate-500 md:mb-0">
                 Copyright © 2024
-                <a href="https://material-tailwind.com/">Syanaz Florist Karangan Bunga Balikpapan</a>. All
+                <a href="https://material-tailwind.com/">Syahnaz Florist Karangan Bunga Balikpapan</a>. All
                 Rights Reserved.
             </p>
             <div class="flex gap-4 text-slate-600 sm:justify-center">
