@@ -14,19 +14,21 @@
             </div>
             <div class="flex flex-col space-y-4 mt-2 p-4">
                 <!-- Contact 1 -->
-                <a href="https://wa.me/123456789?text=Halo%20CS%201" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded transition duration-300 ease-in-out">
-                    <img src="/images/logo.png" alt="CS 1" class="w-10 h-10 rounded-full">
+                <a href="https://wa.me/6289513688170?text=Halo%20CS%201%20Syanaz%20Florist,%20saya%20ingin%20memesan%20papan%20ucapan" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded transition duration-300 ease-in-out">
+                    <img src="{{ asset('whatsapp.png') }}" alt="CS 1" class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">CS 1</p>
                         <p class="text-green-500">Available</p>
+                        <p class="text-sm text-gray-500">+62 895-1368-8170</p>
                     </div>
                 </a>
                 <!-- Contact 2 -->
-                <a href="https://wa.me/987654321?text=Halo%20CS%202" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded transition duration-300 ease-in-out">
-                    <img src="/images/logo.png" alt="CS 2" class="w-10 h-10 rounded-full">
+                <a href="https://wa.me/6282252924080?text=Halo%20CS%202%20Syanaz%20Florist,%20saya%20ingin%20memesan%20papan%20ucapan" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded transition duration-300 ease-in-out">
+                    <img src="{{ asset('whatsapp.png') }}" alt="CS 2" class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">CS 2</p>
                         <p class="text-green-500">Available</p>
+                        <p class="text-sm text-gray-500">+62 822-5292-4080</p>
                     </div>
                 </a>
             </div>

@@ -15,7 +15,7 @@
             <!-- Kolom Alamat -->
             <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transform transition duration-300">
                 <div class="flex justify-center">
-                    <img src="https://img.icons8.com/ios-filled/50/4caf50/google-maps-new.png" alt="Icon Lokasi" class="h-16">
+                    <img src="{{ asset('google-maps-new.png') }}" alt="Icon Lokasi" class="h-16">
                 </div>
                 <h3 class="font-bold text-lg mt-4 text-green-600">Alamat</h3>
                 <p class="text-gray-700 mt-2 text-sm">
@@ -26,7 +26,7 @@
             <!-- Kolom Jam Buka -->
             <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transform transition duration-300">
                 <div class="flex justify-center">
-                    <img src="https://img.icons8.com/ios-filled/50/4caf50/clock.png" alt="Icon Jam Buka" class="h-16">
+                    <img src="{{ asset('clock.png') }}" alt="Icon Jam Buka" class="h-16">
                 </div>
                 <h3 class="font-bold text-lg mt-4 text-green-600">Jam Buka</h3>
                 <p class="text-gray-700 mt-2 text-sm">Selalu Buka</p>
@@ -35,11 +35,11 @@
             <!-- Kolom CS 1 -->
             <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transform transition duration-300">
                 <div class="flex justify-center">
-                    <img src="https://img.icons8.com/ios-filled/50/4caf50/whatsapp.png" alt="Icon WhatsApp" class="h-16">
+                    <img src="{{ asset('whatsapp.png') }}" alt="Icon WhatsApp" class="h-16">
                 </div>
                 <h3 class="font-bold text-lg mt-4 text-green-600">CS 1</h3>
                 <p class="text-gray-700 mt-2 text-sm">
-                    <a href="https://wa.me/6281234200848" class="text-green-500 hover:text-green-700">
+                    <a href="https://wa.me/6289513688170" class="text-green-500 hover:text-green-700">
                         +62 895-1368-8170
                     </a>
                 </p>
@@ -48,11 +48,11 @@
             <!-- Kolom CS 2 -->
             <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:scale-105 transform transition duration-300">
                 <div class="flex justify-center">
-                    <img src="https://img.icons8.com/ios-filled/50/4caf50/whatsapp.png" alt="Icon WhatsApp" class="h-16">
+                    <img src="{{ asset('whatsapp.png') }}" alt="Icon WhatsApp" class="h-16">
                 </div>
                 <h3 class="font-bold text-lg mt-4 text-green-600">CS 2</h3>
                 <p class="text-gray-700 mt-2 text-sm">
-                    <a href="https://wa.me/6281226823722" class="text-green-500 hover:text-green-700">
+                    <a href="https://wa.me/6282252924080" class="text-green-500 hover:text-green-700">
                         +62 822-5292-4080
                     </a>
                 </p>
