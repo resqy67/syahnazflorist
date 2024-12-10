@@ -24,7 +24,7 @@
                     <a href="/products" class="flex items-center hover:text-green-600">Produk</a>
                 </li>
                 <li class="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-                    <a href="#" class="flex items-center hover:text-green-600">Kontak Kami</a>
+                    <a href="/contact" class="flex items-center hover:text-green-600">Kontak Kami</a>
                 </li>
             </ul>
         </div>

@@ -20,6 +20,12 @@ class ProductsController extends Controller
         return view('home', compact('products', 'categories'));
     }
 
+    public function contact(){
+        // $products = Products::with('category')->latest()->take(4)->get();
+        $categories = Categories::all();
+        return view('contact', compact('categories'));
+    }
+
     public function products(Request $request)
     {
         $query = products::query();

@@ -22,6 +22,7 @@
     {{-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> --}}
 
     <!-- Styles / Scripts -->
+    <script src="https://unpkg.com/alpinejs@3.14.7/dist/cdn.min.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -29,6 +30,7 @@
     <script src="{{ asset('resources/js/app.js') }}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script async src="node_modules/@material-tailwind/html/scripts/ripple.js"></script>
+    {{-- <script src="//unpkg.com/alpinejs" defer></script> --}}
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         {{-- <script async src="node_modules/@material-tailwind/html/scripts/ripple.js"></script> --}}
@@ -88,6 +90,7 @@
     </header>
     <main>
         @yield('content')
+        @include('components.floating-action')
     </main>
     <footer>
         @include('partials.footer')
