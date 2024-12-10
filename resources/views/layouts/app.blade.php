@@ -89,8 +89,8 @@
         @include('partials.navbar')
     </header>
     <main>
-        @include('components.floating-action')
         @yield('content')
+        @include('components.floating-action')
     </main>
     <footer>
         @include('partials.footer')
