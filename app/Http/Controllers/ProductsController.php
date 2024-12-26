@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Artesaos\SEOTools\Facades\SEOMeta;
 use App\Models\Categories;
 use App\Models\Products;
 use Illuminate\Http\Request;
@@ -15,6 +16,10 @@ class ProductsController extends Controller
     {
         // $products = Products::latest()->get(4);
         $products = Products::with('category')->latest()->take(4)->get();
+        // buat meta title
+        SEOMeta::setTitle('Syahnaz Florist - Toko Papan Ucapan Bunga Balikpapan');
+        SEOMeta::setDescription('Syahnaz Florist menyediakan papan ucapan dan rangkaian bunga berkualitas dengan harga terjangkau.');
+        SEOMeta::setKeywords(['florist', 'syahnazflorist', 'Papan Ucapan', 'Bunga', 'Bunga Papan', 'Bunga Papan Ucapan', 'Bunga Papan Ucapan Selamat', 'Bunga Papan Ucapan Duka Cita']);
         // dd($products);
         $categories = Categories::all();
         return view('home', compact('products', 'categories'));
@@ -23,12 +28,19 @@ class ProductsController extends Controller
     public function contact(){
         // $products = Products::with('category')->latest()->take(4)->get();
         $categories = Categories::all();
+        SEOMeta::setTitle('Syahnaz Florist - Kontak Kami');
+        SEOMeta::setDescription('Hubungi kami untuk informasi lebih lanjut.');
+        SEOMeta::setKeywords(['florist', 'syahnazflorist', 'Papan Ucapan', 'Bunga', 'Bunga Papan', 'Bunga Papan Ucapan', 'Bunga Papan Ucapan Selamat', 'Bunga Papan Ucapan Duka Cita']);
         return view('contact', compact('categories'));
     }
 
     public function products(Request $request)
     {
         $query = products::query();
+        SEOMeta::setTitle('Syahnaz Florist - Produk');
+        SEOMeta::setDescription('Syahnaz Florist menyediakan papan ucapan dan rangkaian bunga berkualitas dengan harga terjangkau.');
+        SEOMeta::setKeywords(['florist', 'syahnazflorist', 'Papan Ucapan', 'Bunga', 'Bunga Papan', 'Bunga Papan Ucapan', 'Bunga Papan Ucapan Selamat', 'Bunga Papan Ucapan Duka Cita']);
+
 
         if ($request->has('search') && $request->search != '') {
             $query->where('name', 'like', '%' . $request->search . '%');
@@ -70,9 +82,12 @@ class ProductsController extends Controller
         $product = Products::with('category')->where('slug', $slug)->firstOrFail();
         // $products = products::all();
         $relatedProducts = Products::where('category_id', $product->category_id)
-            ->where('id', '!=', $product->id)
-            ->get();
+        ->where('id', '!=', $product->id)
+        ->get();
         $categories = Categories::all();
+        SEOMeta::setTitle('Syahnaz Florist - ' . $product->name);
+        SEOMeta::setDescription('Syahnaz Florist menyediakan papan ucapan dan rangkaian bunga berkualitas dengan harga terjangkau.');
+        SEOMeta::setKeywords(['florist', 'syahnazflorist', 'Papan Ucapan', 'Bunga', 'Bunga Papan', 'Bunga Papan Ucapan', 'Bunga Papan Ucapan Selamat', 'Bunga Papan Ucapan Duka Cita']);
         // dd($products);
         return view('product-detail', compact('product', 'categories', 'relatedProducts'));
     }
