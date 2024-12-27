@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
 use App\Models\Categories;
 use App\Models\Products;
 use Illuminate\Http\Request;
@@ -20,6 +21,11 @@ class ProductsController extends Controller
         SEOMeta::setTitle('Syahnaz Florist - Toko Papan Ucapan Bunga Balikpapan');
         SEOMeta::setDescription('Syahnaz Florist menyediakan papan ucapan dan rangkaian bunga berkualitas dengan harga terjangkau.');
         SEOMeta::setKeywords(['florist', 'syahnazflorist', 'Papan Ucapan', 'Bunga', 'Bunga Papan', 'Bunga Papan Ucapan', 'Bunga Papan Ucapan Selamat', 'Bunga Papan Ucapan Duka Cita']);
+        OpenGraph::setDescription('Syahnaz Florist menyediakan papan ucapan dan rangkaian bunga berkualitas dengan harga terjangkau.');
+        OpenGraph::setTitle('Syahnaz Florist - Toko Papan Ucapan Bunga Balikpapan');
+        OpenGraph::setUrl('https://syahnazflorist.com');
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage('https://syahnazflorist.com/logo.png');
         // dd($products);
         $categories = Categories::all();
         return view('home', compact('products', 'categories'));
@@ -31,6 +37,10 @@ class ProductsController extends Controller
         SEOMeta::setTitle('Syahnaz Florist - Kontak Kami');
         SEOMeta::setDescription('Hubungi kami untuk informasi lebih lanjut.');
         SEOMeta::setKeywords(['florist', 'syahnazflorist', 'Papan Ucapan', 'Bunga', 'Bunga Papan', 'Bunga Papan Ucapan', 'Bunga Papan Ucapan Selamat', 'Bunga Papan Ucapan Duka Cita']);
+        OpenGraph::setDescription('Hubungi kami untuk informasi lebih lanjut.');
+        OpenGraph::setTitle('Syahnaz Florist - Kontak Kami');
+        OpenGraph::setUrl('https://syahnazflorist.com/contact');
+        OpenGraph::addProperty('type', 'website');
         return view('contact', compact('categories'));
     }
 
@@ -40,6 +50,10 @@ class ProductsController extends Controller
         SEOMeta::setTitle('Syahnaz Florist - Produk');
         SEOMeta::setDescription('Syahnaz Florist menyediakan papan ucapan dan rangkaian bunga berkualitas dengan harga terjangkau.');
         SEOMeta::setKeywords(['florist', 'syahnazflorist', 'Papan Ucapan', 'Bunga', 'Bunga Papan', 'Bunga Papan Ucapan', 'Bunga Papan Ucapan Selamat', 'Bunga Papan Ucapan Duka Cita']);
+        OpenGraph::setDescription('Syahnaz Florist menyediakan papan ucapan dan rangkaian bunga berkualitas dengan harga terjangkau.');
+        OpenGraph::setTitle('Syahnaz Florist - Produk');
+        OpenGraph::setUrl('https://syahnazflorist.com/products');
+        OpenGraph::addProperty('type', 'website');
 
 
         if ($request->has('search') && $request->search != '') {
@@ -88,6 +102,12 @@ class ProductsController extends Controller
         SEOMeta::setTitle('Syahnaz Florist - ' . $product->name);
         SEOMeta::setDescription('Syahnaz Florist menyediakan papan ucapan dan rangkaian bunga berkualitas dengan harga terjangkau.');
         SEOMeta::setKeywords(['florist', 'syahnazflorist', 'Papan Ucapan', 'Bunga', 'Bunga Papan', 'Bunga Papan Ucapan', 'Bunga Papan Ucapan Selamat', 'Bunga Papan Ucapan Duka Cita']);
+        OpenGraph::setDescription('Syahnaz Florist menyediakan papan ucapan dan rangkaian bunga berkualitas dengan harga terjangkau.');
+        OpenGraph::setTitle('Syahnaz Florist - ' . $product->name);
+        OpenGraph::setUrl('https://syahnazflorist.com/products/' . $product->slug);
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage($product->image);
+
         // dd($products);
         return view('product-detail', compact('product', 'categories', 'relatedProducts'));
     }
