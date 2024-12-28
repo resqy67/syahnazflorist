@@ -23,7 +23,7 @@
                 </p>
 
                 <!-- Tombol Order WhatsApp -->
-                <a href="https://wa.me/6289685650738?text={{ urlencode('Halo, saya ingin memesan karangan bunga berikut:') }}%0A{{ urlencode($product->name) }}%0A%0AMohon informasi lebih lanjut.%0A{{ urlencode(url('product/' . $product->slug)) }}"
+                <a href="https://wa.me/6289513688170?text={{ urlencode('Halo, saya ingin memesan karangan bunga berikut:') }}%0A{{ urlencode($product->name) }}%0A%0AMohon informasi lebih lanjut.%0A{{ urlencode(url('product/' . $product->slug)) }}"
                     target="_blank"
                     class="bg-green-500 text-white font-semibold py-3 px-6 rounded-lg inline-block shadow hover:bg-green-600">
                     Order Via WhatsApp

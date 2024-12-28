@@ -14,7 +14,7 @@
             </div>
             <div class="flex flex-col space-y-4 mt-2 p-4">
                 <!-- Contact 1 -->
-                <a href="https://wa.me/6289513688170?text=Halo%20CS%201%20Syanaz%20Florist,%20saya%20ingin%20memesan%20papan%20ucapan" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded transition duration-300 ease-in-out">
+                <a href="https://wa.me/6289513688170?text={{ urlencode('Halo, saya ingin memesan karangan bunga') }}%0AMohon informasi lebih lanjut.%0A{{ urlencode(url('product/')) }}" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded transition duration-300 ease-in-out">
                     <img src="{{ asset('whatsapp.png') }}" alt="CS 1" class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">CS 1</p>
@@ -23,7 +23,7 @@
                     </div>
                 </a>
                 <!-- Contact 2 -->
-                <a href="https://wa.me/6282252924080?text=Halo%20CS%202%20Syanaz%20Florist,%20saya%20ingin%20memesan%20papan%20ucapan" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded transition duration-300 ease-in-out">
+                <a href="https://wa.me/6282252924080?text={{ urlencode('Halo, saya ingin memesan karangan bunga') }}%0AMohon informasi lebih lanjut.%0A{{ urlencode(url('product/')) }}" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded transition duration-300 ease-in-out">
                     <img src="{{ asset('whatsapp.png') }}" alt="CS 2" class="w-10 h-10 rounded-full">
                     <div>
                         <p class="font-semibold">CS 2</p>
