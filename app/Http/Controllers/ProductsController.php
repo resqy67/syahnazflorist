@@ -106,7 +106,7 @@ class ProductsController extends Controller
         OpenGraph::setTitle('Syahnaz Florist - ' . $product->name);
         OpenGraph::setUrl('https://syahnazflorist.com/products/' . $product->slug);
         OpenGraph::addProperty('type', 'website');
-        OpenGraph::addImage($product->image);
+        OpenGraph::addImage(url('storage/' . $product->image));
 
         // dd($products);
         return view('product-detail', compact('product', 'categories', 'relatedProducts'));
