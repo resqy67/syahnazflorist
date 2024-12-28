@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
 
     {{-- <title>
         @if (Request::is('/'))
@@ -25,7 +26,7 @@
     <!-- Styles / Scripts -->
     <script src="https://unpkg.com/alpinejs@3.14.7/dist/cdn.min.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    {{-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /> --}}
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     {{-- <link rel="stylesheet" href="{{ asset('resources/css/app.css') }}">
     <script src="{{ asset('resources/js/app.js') }}" defer></script> --}}
@@ -38,6 +39,7 @@
         {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> --}}
     @else
     @endif
+    @yield('head')
 </head>
 
 <body>
