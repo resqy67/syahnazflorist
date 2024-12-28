@@ -40,6 +40,7 @@ class ProductsController extends Controller
         OpenGraph::setDescription('Hubungi kami untuk informasi lebih lanjut.');
         OpenGraph::setTitle('Syahnaz Florist - Kontak Kami');
         OpenGraph::setUrl('https://syahnazflorist.com/contact');
+        OpenGraph::addImage('https://syahnazflorist.com/logo.png');
         OpenGraph::addProperty('type', 'website');
         return view('contact', compact('categories'));
     }
@@ -53,6 +54,7 @@ class ProductsController extends Controller
         OpenGraph::setDescription('Syahnaz Florist menyediakan papan ucapan dan rangkaian bunga berkualitas dengan harga terjangkau.');
         OpenGraph::setTitle('Syahnaz Florist - Produk');
         OpenGraph::setUrl('https://syahnazflorist.com/products');
+        OpenGraph::addImage('https://syahnazflorist.com/logo.png');
         OpenGraph::addProperty('type', 'website');
 
 
