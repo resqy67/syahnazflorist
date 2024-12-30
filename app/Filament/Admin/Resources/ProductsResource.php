@@ -58,6 +58,7 @@ class ProductsResource extends Resource
                     ->required(), // Tambahkan validasi required
                 Forms\Components\FileUpload::make('image')
                     ->label('Gambar Produk')
+                    ->disk('public')
                     ->image()
                     ->required(),
             ]);
@@ -75,15 +76,12 @@ class ProductsResource extends Resource
                     ->numeric()
                     ->prefix('Rp')
                     ->sortable(),
-                Tables\Columns\ImageColumn::make('image')->label('Gambar'),
+                Tables\Columns\ImageColumn::make('image')
+                    ->disk('public')
+                    ->label('Gambar'),
                 Tables\Columns\TextColumn::make('size')
                     ->label('Ukuran Produk')
                     ->searchable(),
-                // Tables\Columns\TextColumn::make('slug')
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('category_id')
-                //     ->numeric()
-                //     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

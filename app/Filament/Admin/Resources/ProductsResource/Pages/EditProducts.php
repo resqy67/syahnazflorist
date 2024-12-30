@@ -21,6 +21,12 @@ class EditProducts extends EditRecord
     protected function mutateFormDataBeforeSave(array $data): array
     {
         $data['slug'] = Str::slug($data['name']);
+
+        // if (empty($data['image'])) {
+        //     $data['image'] = $this->record->image;
+        // }
+
         return $data;
     }
+
 }
